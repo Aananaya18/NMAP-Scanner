@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename = 'nmap.css')}}"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nmap Port Scanner</title> 
+    </head>
+    <body>
+        
+        <div class="wrapper">
+        <h1 class="heading"> NMAP Port Scanner tool</h1>
+
+        <p class="para"> Welcome to NMAP Port Scanner tool. We are here to help you with scanning the IP addresses and providing you a list of opended and closed ports that can be used for ethical purposes only</p>
+
+        <h3 class="target-heading"> Enter a target IP address to simulate a NMAP scan and learn about it's open ports</h3>
+
+        <div class="input-label">
+        <label for="ip-input">Target IP Address</label>
+        <input type="text" id="ip-input" placeholder="IP Address xxxx.xxxx.xxxx.xxxx" required autocomplete="off">
+        </div>
+
+        <button id="scan-button">Scan</button>
+
+        <div id="scanning-message" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+        <pre id="results" style="display: none;"></pre>
+        <p id="error" style="display: none;"></p>
+        </div>
+        <script src="{{url_for('static', filename= 'nmap.js')}}"></script>
+
+
+
+
+    </body>
+</html>
